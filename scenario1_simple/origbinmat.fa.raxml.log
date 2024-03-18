@@ -1,0 +1,128 @@
+
+RAxML-NG v. 1.0.1-master released on 19.09.2020 by The Exelixis Lab.
+Developed by: Alexey M. Kozlov and Alexandros Stamatakis.
+Contributors: Diego Darriba, Tomas Flouri, Benoit Morel, Sarah Lutteropp, Ben Bettisworth.
+Latest version: https://github.com/amkozlov/raxml-ng
+Questions/problems/suggestions? Please visit: https://groups.google.com/forum/#!forum/raxml
+
+System: Intel(R) Core(TM) i7-2670QM CPU @ 2.20GHz, 4 cores, 15 GB RAM
+
+RAxML-NG was called at 19-Mar-2024 00:26:34 as follows:
+
+raxml-ng --all --msa origbinmat.fa --model BIN --redo --bs-trees 10
+
+Analysis options:
+  run mode: ML tree search + bootstrapping (Felsenstein Bootstrap)
+  start tree(s): random (10) + parsimony (10)
+  bootstrap replicates: 10
+  random seed: 1710800794
+  tip-inner: OFF
+  pattern compression: ON
+  per-rate scalers: OFF
+  site repeats: ON
+  branch lengths: proportional (ML estimate, algorithm: NR-FAST)
+  SIMD kernels: AVX
+  parallelization: coarse-grained (auto), PTHREADS (auto)
+
+WARNING: Running in REDO mode: existing checkpoints are ignored, and all result files will be overwritten!
+
+[00:00:00] Reading alignment from file: origbinmat.fa
+[00:00:00] Loaded alignment with 46 taxa and 455 sites
+
+WARNING: Sequences 3 and 4 are exactly identical!
+WARNING: Sequences 5 and 6 are exactly identical!
+WARNING: Sequences 11 and 12 are exactly identical!
+WARNING: Sequences 43 and 44 are exactly identical!
+WARNING: Duplicate sequences found: 4
+
+NOTE: Reduced alignment (with duplicates and gap-only sites/taxa removed) 
+NOTE: was saved to: /home/pavlos/research/language_evolution/mslang/scenario1_simple/origbinmat.fa.raxml.reduced.phy
+
+Alignment comprises 1 partitions and 76 patterns
+
+Partition 0: noname
+Model: BIN+FO
+Alignment sites / patterns: 455 / 76
+Gaps: 0.00 %
+Invariant sites: 0.00 %
+
+
+NOTE: Binary MSA file created: origbinmat.fa.raxml.rba
+
+Parallelization scheme autoconfig: 4 worker(s) x 1 thread(s)
+
+Parallel reduction/worker buffer size: 1 KB  / 0 KB
+
+[00:00:00] Generating 10 random starting tree(s) with 46 taxa
+[00:00:00] Generating 10 parsimony starting tree(s) with 46 taxa
+[00:00:00] Data distribution: max. partitions/sites/weight per thread: 1 / 76 / 152
+[00:00:00] Data distribution: max. searches per worker: 8
+
+Starting ML tree search with 20 distinct starting trees
+
+[00:00:01] [worker #2] ML tree search #3, logLikelihood: -2505.328665
+[00:00:01] [worker #0] ML tree search #1, logLikelihood: -2384.298539
+[00:00:01] [worker #1] ML tree search #2, logLikelihood: -2384.306288
+[00:00:01] [worker #3] ML tree search #4, logLikelihood: -2384.299582
+[00:00:02] [worker #2] ML tree search #7, logLikelihood: -2385.392131
+[00:00:02] [worker #3] ML tree search #8, logLikelihood: -2385.392618
+[00:00:02] [worker #1] ML tree search #6, logLikelihood: -2384.300673
+[00:00:02] [worker #0] ML tree search #5, logLikelihood: -2384.297611
+[00:00:03] [worker #2] ML tree search #11, logLikelihood: -2384.294712
+[00:00:03] [worker #3] ML tree search #12, logLikelihood: -2384.294712
+[00:00:03] [worker #2] ML tree search #15, logLikelihood: -2384.294711
+[00:00:03] [worker #3] ML tree search #16, logLikelihood: -2384.294711
+[00:00:03] [worker #2] ML tree search #19, logLikelihood: -2384.294711
+[00:00:03] [worker #1] ML tree search #10, logLikelihood: -2384.295581
+[00:00:04] [worker #3] ML tree search #20, logLikelihood: -2384.294712
+[00:00:04] [worker #0] ML tree search #9, logLikelihood: -2384.297796
+[00:00:04] [worker #1] ML tree search #14, logLikelihood: -2384.294713
+[00:00:04] [worker #0] ML tree search #13, logLikelihood: -2384.294712
+[00:00:04] [worker #1] ML tree search #18, logLikelihood: -2384.294712
+[00:00:05] [worker #0] ML tree search #17, logLikelihood: -2384.294711
+
+[00:00:05] ML tree search completed, best tree logLH: -2384.294711
+
+[00:00:05] Starting bootstrapping analysis with 10 replicates.
+
+[00:00:06] [worker #2] Bootstrap tree #3, logLikelihood: -2334.555021
+[00:00:06] [worker #0] Bootstrap tree #1, logLikelihood: -2289.967019
+[00:00:06] [worker #1] Bootstrap tree #2, logLikelihood: -2364.672270
+[00:00:06] [worker #3] Bootstrap tree #4, logLikelihood: -2400.242773
+[00:00:07] [worker #2] Bootstrap tree #7, logLikelihood: -2359.181471
+[00:00:07] [worker #0] Bootstrap tree #5, logLikelihood: -2323.362587
+[00:00:07] [worker #1] Bootstrap tree #6, logLikelihood: -2350.530750
+[00:00:07] [worker #3] Bootstrap tree #8, logLikelihood: -2419.530831
+[00:00:08] [worker #0] Bootstrap tree #9, logLikelihood: -2296.757008
+[00:00:08] [worker #1] Bootstrap tree #10, logLikelihood: -2352.071123
+
+Optimized model parameters:
+
+   Partition 0: noname
+   Rate heterogeneity: NONE
+   Base frequencies (ML): 0.853867 0.146133 
+   Substitution rates (ML): 1.000000 
+
+
+Final LogLikelihood: -2384.294711
+
+AIC score: 4948.589423 / AICc score: 4993.589423 / BIC score: 5319.416190
+Free parameters (model + branch lengths): 90
+
+WARNING: Best ML tree contains 6 near-zero branches!
+
+Best ML tree with collapsed near-zero branches saved to: /home/pavlos/research/language_evolution/mslang/scenario1_simple/origbinmat.fa.raxml.bestTreeCollapsed
+Best ML tree saved to: /home/pavlos/research/language_evolution/mslang/scenario1_simple/origbinmat.fa.raxml.bestTree
+All ML trees saved to: /home/pavlos/research/language_evolution/mslang/scenario1_simple/origbinmat.fa.raxml.mlTrees
+Best ML tree with Felsenstein bootstrap (FBP) support values saved to: /home/pavlos/research/language_evolution/mslang/scenario1_simple/origbinmat.fa.raxml.support
+Optimized model saved to: /home/pavlos/research/language_evolution/mslang/scenario1_simple/origbinmat.fa.raxml.bestModel
+Bootstrap trees saved to: /home/pavlos/research/language_evolution/mslang/scenario1_simple/origbinmat.fa.raxml.bootstraps
+
+Execution log saved to: /home/pavlos/research/language_evolution/mslang/scenario1_simple/origbinmat.fa.raxml.log
+
+Analysis started: 19-Mar-2024 00:26:34 / finished: 19-Mar-2024 00:26:42
+
+Elapsed time: 8.802 seconds
+
+Consumed energy: 5124068766.151 Wh (= 25620344 km in an electric car, or 128101719 km with an e-scooter!)
+

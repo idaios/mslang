@@ -1,0 +1,127 @@
+
+RAxML-NG v. 1.0.1-master released on 19.09.2020 by The Exelixis Lab.
+Developed by: Alexey M. Kozlov and Alexandros Stamatakis.
+Contributors: Diego Darriba, Tomas Flouri, Benoit Morel, Sarah Lutteropp, Ben Bettisworth.
+Latest version: https://github.com/amkozlov/raxml-ng
+Questions/problems/suggestions? Please visit: https://groups.google.com/forum/#!forum/raxml
+
+System: Intel(R) Core(TM) i7-2670QM CPU @ 2.20GHz, 4 cores, 15 GB RAM
+
+RAxML-NG was called at 19-Mar-2024 00:42:39 as follows:
+
+raxml-ng --all --msa origbinmat.fa --model BIN --redo --bs-trees 10
+
+Analysis options:
+  run mode: ML tree search + bootstrapping (Felsenstein Bootstrap)
+  start tree(s): random (10) + parsimony (10)
+  bootstrap replicates: 10
+  random seed: 1710801759
+  tip-inner: OFF
+  pattern compression: ON
+  per-rate scalers: OFF
+  site repeats: ON
+  branch lengths: proportional (ML estimate, algorithm: NR-FAST)
+  SIMD kernels: AVX
+  parallelization: coarse-grained (auto), PTHREADS (auto)
+
+WARNING: Running in REDO mode: existing checkpoints are ignored, and all result files will be overwritten!
+
+[00:00:00] Reading alignment from file: origbinmat.fa
+[00:00:00] Loaded alignment with 46 taxa and 539 sites
+
+WARNING: Sequences 7 and 8 are exactly identical!
+WARNING: Sequences 9 and 10 are exactly identical!
+WARNING: Sequences 17 and 18 are exactly identical!
+WARNING: Duplicate sequences found: 3
+
+NOTE: Reduced alignment (with duplicates and gap-only sites/taxa removed) 
+NOTE: was saved to: /home/pavlos/research/language_evolution/mslang/origbinmat.fa.raxml.reduced.phy
+
+Alignment comprises 1 partitions and 91 patterns
+
+Partition 0: noname
+Model: BIN+FO
+Alignment sites / patterns: 539 / 91
+Gaps: 0.00 %
+Invariant sites: 0.00 %
+
+
+NOTE: Binary MSA file created: origbinmat.fa.raxml.rba
+
+Parallelization scheme autoconfig: 4 worker(s) x 1 thread(s)
+
+Parallel reduction/worker buffer size: 1 KB  / 0 KB
+
+[00:00:00] Generating 10 random starting tree(s) with 46 taxa
+[00:00:00] Generating 10 parsimony starting tree(s) with 46 taxa
+[00:00:00] Data distribution: max. partitions/sites/weight per thread: 1 / 91 / 182
+[00:00:00] Data distribution: max. searches per worker: 8
+
+Starting ML tree search with 20 distinct starting trees
+
+[00:00:01] [worker #3] ML tree search #4, logLikelihood: -2954.141522
+[00:00:01] [worker #1] ML tree search #2, logLikelihood: -2954.147645
+[00:00:01] [worker #0] ML tree search #1, logLikelihood: -2954.150080
+[00:00:01] [worker #2] ML tree search #3, logLikelihood: -2954.156585
+[00:00:02] [worker #2] ML tree search #7, logLikelihood: -2954.144901
+[00:00:02] [worker #0] ML tree search #5, logLikelihood: -2954.141382
+[00:00:02] [worker #1] ML tree search #6, logLikelihood: -2954.145155
+[00:00:03] [worker #3] ML tree search #8, logLikelihood: -2954.157147
+[00:00:03] [worker #2] ML tree search #11, logLikelihood: -2954.141059
+[00:00:03] [worker #0] ML tree search #9, logLikelihood: -2954.142268
+[00:00:03] [worker #3] ML tree search #12, logLikelihood: -2954.141059
+[00:00:04] [worker #2] ML tree search #15, logLikelihood: -2954.141059
+[00:00:04] [worker #1] ML tree search #10, logLikelihood: -2954.153979
+[00:00:04] [worker #0] ML tree search #13, logLikelihood: -2954.141059
+[00:00:04] [worker #3] ML tree search #16, logLikelihood: -2954.141075
+[00:00:04] [worker #2] ML tree search #19, logLikelihood: -2954.141064
+[00:00:04] [worker #1] ML tree search #14, logLikelihood: -2954.141060
+[00:00:05] [worker #0] ML tree search #17, logLikelihood: -2954.141060
+[00:00:05] [worker #3] ML tree search #20, logLikelihood: -2954.141059
+[00:00:05] [worker #1] ML tree search #18, logLikelihood: -2954.141059
+
+[00:00:05] ML tree search completed, best tree logLH: -2954.141059
+
+[00:00:05] Starting bootstrapping analysis with 10 replicates.
+
+[00:00:06] [worker #0] Bootstrap tree #1, logLikelihood: -2923.078362
+[00:00:06] [worker #2] Bootstrap tree #3, logLikelihood: -2893.357950
+[00:00:07] [worker #3] Bootstrap tree #4, logLikelihood: -2902.019621
+[00:00:07] [worker #1] Bootstrap tree #2, logLikelihood: -2923.329351
+[00:00:08] [worker #0] Bootstrap tree #5, logLikelihood: -3014.475264
+[00:00:08] [worker #2] Bootstrap tree #7, logLikelihood: -2885.181006
+[00:00:08] [worker #1] Bootstrap tree #6, logLikelihood: -2902.226152
+[00:00:09] [worker #3] Bootstrap tree #8, logLikelihood: -2917.650438
+[00:00:10] [worker #1] Bootstrap tree #10, logLikelihood: -2901.624531
+[00:00:10] [worker #0] Bootstrap tree #9, logLikelihood: -2926.907681
+
+Optimized model parameters:
+
+   Partition 0: noname
+   Rate heterogeneity: NONE
+   Base frequencies (ML): 0.883575 0.116425 
+   Substitution rates (ML): 1.000000 
+
+
+Final LogLikelihood: -2954.141059
+
+AIC score: 6088.282118 / AICc score: 6124.844618 / BIC score: 6474.356519
+Free parameters (model + branch lengths): 90
+
+WARNING: Best ML tree contains 6 near-zero branches!
+
+Best ML tree with collapsed near-zero branches saved to: /home/pavlos/research/language_evolution/mslang/origbinmat.fa.raxml.bestTreeCollapsed
+Best ML tree saved to: /home/pavlos/research/language_evolution/mslang/origbinmat.fa.raxml.bestTree
+All ML trees saved to: /home/pavlos/research/language_evolution/mslang/origbinmat.fa.raxml.mlTrees
+Best ML tree with Felsenstein bootstrap (FBP) support values saved to: /home/pavlos/research/language_evolution/mslang/origbinmat.fa.raxml.support
+Optimized model saved to: /home/pavlos/research/language_evolution/mslang/origbinmat.fa.raxml.bestModel
+Bootstrap trees saved to: /home/pavlos/research/language_evolution/mslang/origbinmat.fa.raxml.bootstraps
+
+Execution log saved to: /home/pavlos/research/language_evolution/mslang/origbinmat.fa.raxml.log
+
+Analysis started: 19-Mar-2024 00:42:39 / finished: 19-Mar-2024 00:42:49
+
+Elapsed time: 10.500 seconds
+
+Consumed energy: 5124069348.693 Wh (= 25620347 km in an electric car, or 128101734 km with an e-scooter!)
+

@@ -1,0 +1,127 @@
+
+RAxML-NG v. 1.0.1-master released on 19.09.2020 by The Exelixis Lab.
+Developed by: Alexey M. Kozlov and Alexandros Stamatakis.
+Contributors: Diego Darriba, Tomas Flouri, Benoit Morel, Sarah Lutteropp, Ben Bettisworth.
+Latest version: https://github.com/amkozlov/raxml-ng
+Questions/problems/suggestions? Please visit: https://groups.google.com/forum/#!forum/raxml
+
+System: Intel(R) Core(TM) i7-2670QM CPU @ 2.20GHz, 4 cores, 15 GB RAM
+
+RAxML-NG was called at 19-Mar-2024 00:41:59 as follows:
+
+raxml-ng --all --msa binmat.fa --model BIN --redo --bs-trees 10
+
+Analysis options:
+  run mode: ML tree search + bootstrapping (Felsenstein Bootstrap)
+  start tree(s): random (10) + parsimony (10)
+  bootstrap replicates: 10
+  random seed: 1710801719
+  tip-inner: OFF
+  pattern compression: ON
+  per-rate scalers: OFF
+  site repeats: ON
+  branch lengths: proportional (ML estimate, algorithm: NR-FAST)
+  SIMD kernels: AVX
+  parallelization: coarse-grained (auto), PTHREADS (auto)
+
+WARNING: Running in REDO mode: existing checkpoints are ignored, and all result files will be overwritten!
+
+[00:00:00] Reading alignment from file: binmat.fa
+[00:00:00] Loaded alignment with 46 taxa and 388 sites
+
+WARNING: Sequences 7 and 8 are exactly identical!
+WARNING: Sequences 9 and 10 are exactly identical!
+WARNING: Sequences 17 and 18 are exactly identical!
+WARNING: Duplicate sequences found: 3
+
+NOTE: Reduced alignment (with duplicates and gap-only sites/taxa removed) 
+NOTE: was saved to: /home/pavlos/research/language_evolution/mslang/binmat.fa.raxml.reduced.phy
+
+Alignment comprises 1 partitions and 299 patterns
+
+Partition 0: noname
+Model: BIN+FO
+Alignment sites / patterns: 388 / 299
+Gaps: 0.00 %
+Invariant sites: 0.00 %
+
+
+NOTE: Binary MSA file created: binmat.fa.raxml.rba
+
+Parallelization scheme autoconfig: 4 worker(s) x 1 thread(s)
+
+Parallel reduction/worker buffer size: 1 KB  / 0 KB
+
+[00:00:00] Generating 10 random starting tree(s) with 46 taxa
+[00:00:00] Generating 10 parsimony starting tree(s) with 46 taxa
+[00:00:00] Data distribution: max. partitions/sites/weight per thread: 1 / 299 / 598
+[00:00:00] Data distribution: max. searches per worker: 8
+
+Starting ML tree search with 20 distinct starting trees
+
+[00:00:01] [worker #1] ML tree search #2, logLikelihood: -3576.237714
+[00:00:01] [worker #3] ML tree search #4, logLikelihood: -3576.237714
+[00:00:01] [worker #0] ML tree search #1, logLikelihood: -3576.237714
+[00:00:02] [worker #2] ML tree search #3, logLikelihood: -3576.237714
+[00:00:04] [worker #1] ML tree search #6, logLikelihood: -3576.237714
+[00:00:04] [worker #2] ML tree search #7, logLikelihood: -3576.237737
+[00:00:04] [worker #3] ML tree search #8, logLikelihood: -3576.237714
+[00:00:04] [worker #0] ML tree search #5, logLikelihood: -3576.237713
+[00:00:05] [worker #2] ML tree search #11, logLikelihood: -3576.237713
+[00:00:05] [worker #3] ML tree search #12, logLikelihood: -3576.237714
+[00:00:06] [worker #1] ML tree search #10, logLikelihood: -3576.237714
+[00:00:06] [worker #0] ML tree search #9, logLikelihood: -3576.237714
+[00:00:07] [worker #2] ML tree search #15, logLikelihood: -3576.237713
+[00:00:07] [worker #3] ML tree search #16, logLikelihood: -3576.237714
+[00:00:07] [worker #0] ML tree search #13, logLikelihood: -3576.237713
+[00:00:07] [worker #1] ML tree search #14, logLikelihood: -3576.237713
+[00:00:08] [worker #2] ML tree search #19, logLikelihood: -3576.237714
+[00:00:08] [worker #3] ML tree search #20, logLikelihood: -3576.237713
+[00:00:09] [worker #0] ML tree search #17, logLikelihood: -3576.237714
+[00:00:09] [worker #1] ML tree search #18, logLikelihood: -3576.237713
+
+[00:00:09] ML tree search completed, best tree logLH: -3576.237713
+
+[00:00:09] Starting bootstrapping analysis with 10 replicates.
+
+[00:00:11] [worker #1] Bootstrap tree #2, logLikelihood: -3494.916194
+[00:00:11] [worker #0] Bootstrap tree #1, logLikelihood: -3498.912267
+[00:00:11] [worker #3] Bootstrap tree #4, logLikelihood: -3546.721629
+[00:00:11] [worker #2] Bootstrap tree #3, logLikelihood: -3474.071295
+[00:00:12] [worker #0] Bootstrap tree #5, logLikelihood: -3435.226310
+[00:00:12] [worker #1] Bootstrap tree #6, logLikelihood: -3453.606372
+[00:00:12] [worker #3] Bootstrap tree #8, logLikelihood: -3437.717324
+[00:00:13] [worker #2] Bootstrap tree #7, logLikelihood: -3661.785382
+[00:00:13] [worker #0] Bootstrap tree #9, logLikelihood: -3480.743606
+[00:00:14] [worker #1] Bootstrap tree #10, logLikelihood: -3562.014009
+
+Optimized model parameters:
+
+   Partition 0: noname
+   Rate heterogeneity: NONE
+   Base frequencies (ML): 0.547582 0.452418 
+   Substitution rates (ML): 1.000000 
+
+
+Final LogLikelihood: -3576.237713
+
+AIC score: 7332.475426 / AICc score: 7387.626941 / BIC score: 7688.965906
+Free parameters (model + branch lengths): 90
+
+WARNING: Best ML tree contains 3 near-zero branches!
+
+Best ML tree with collapsed near-zero branches saved to: /home/pavlos/research/language_evolution/mslang/binmat.fa.raxml.bestTreeCollapsed
+Best ML tree saved to: /home/pavlos/research/language_evolution/mslang/binmat.fa.raxml.bestTree
+All ML trees saved to: /home/pavlos/research/language_evolution/mslang/binmat.fa.raxml.mlTrees
+Best ML tree with Felsenstein bootstrap (FBP) support values saved to: /home/pavlos/research/language_evolution/mslang/binmat.fa.raxml.support
+Optimized model saved to: /home/pavlos/research/language_evolution/mslang/binmat.fa.raxml.bestModel
+Bootstrap trees saved to: /home/pavlos/research/language_evolution/mslang/binmat.fa.raxml.bootstraps
+
+Execution log saved to: /home/pavlos/research/language_evolution/mslang/binmat.fa.raxml.log
+
+Analysis started: 19-Mar-2024 00:41:59 / finished: 19-Mar-2024 00:42:14
+
+Elapsed time: 14.371 seconds
+
+Consumed energy: 5124068201.812 Wh (= 25620341 km in an electric car, or 128101705 km with an e-scooter!)
+

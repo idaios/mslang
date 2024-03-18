@@ -1,5 +1,6 @@
-real orig mult bin
-real 0 8 12 10
-orig 8 0 10 14
-mult 12 10 0 10
-bin 10 14 10 0
+real guide orig mult bin
+real 0 11.3 23.6 23.1 22.8
+guide 11.3 0 22 24 24
+orig 23.6 22 0 16 18
+mult 23.1 24 16 0 6
+bin 22.8 24 18 6 0

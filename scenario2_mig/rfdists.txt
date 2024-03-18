@@ -1,0 +1,6 @@
+real guide orig mult bin
+real 0 11.8 15.1 12.5 14.5
+guide 11.8 0 14 12 14
+orig 15.1 14 0 8 10
+mult 12.5 12 8 0 2
+bin 14.5 14 10 2 0
