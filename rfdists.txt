@@ -1,0 +1,5 @@
+real orig mult bin
+real 0 8 12 10
+orig 8 0 10 14
+mult 12 10 0 10
+bin 10 14 10 0

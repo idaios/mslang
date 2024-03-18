@@ -1,0 +1,3 @@
+orig 512
+mult 211
+bin 377
