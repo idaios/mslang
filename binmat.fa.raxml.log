@@ -7,7 +7,7 @@ Questions/problems/suggestions? Please visit: https://groups.google.com/forum/#!
 
 System: Intel(R) Core(TM) i7-2670QM CPU @ 2.20GHz, 4 cores, 15 GB RAM
 
-RAxML-NG was called at 18-Mar-2024 17:39:22 as follows:
+RAxML-NG was called at 18-Mar-2024 21:32:21 as follows:
 
 raxml-ng --all --msa binmat.fa --model BIN --redo --bs-trees 10
 
@@ -15,7 +15,7 @@ Analysis options:
   run mode: ML tree search + bootstrapping (Felsenstein Bootstrap)
   start tree(s): random (10) + parsimony (10)
   bootstrap replicates: 10
-  random seed: 1710776362
+  random seed: 1710790341
   tip-inner: OFF
   pattern compression: ON
   per-rate scalers: OFF
@@ -27,19 +27,21 @@ Analysis options:
 WARNING: Running in REDO mode: existing checkpoints are ignored, and all result files will be overwritten!
 
 [00:00:00] Reading alignment from file: binmat.fa
-[00:00:00] Loaded alignment with 46 taxa and 379 sites
+[00:00:00] Loaded alignment with 46 taxa and 285 sites
 
+WARNING: Sequences 6 and 7 are exactly identical!
+WARNING: Sequences 6 and 8 are exactly identical!
 WARNING: Sequences 31 and 32 are exactly identical!
-WARNING: Duplicate sequences found: 1
+WARNING: Duplicate sequences found: 3
 
 NOTE: Reduced alignment (with duplicates and gap-only sites/taxa removed) 
-NOTE: was saved to: /home/pavlos/software/msdir/binmat.fa.raxml.reduced.phy
+NOTE: was saved to: /home/pavlos/research/language_evolution/mslang/binmat.fa.raxml.reduced.phy
 
-Alignment comprises 1 partitions and 283 patterns
+Alignment comprises 1 partitions and 188 patterns
 
 Partition 0: noname
 Model: BIN+FO
-Alignment sites / patterns: 379 / 283
+Alignment sites / patterns: 285 / 188
 Gaps: 0.00 %
 Invariant sites: 0.00 %
 
@@ -52,74 +54,74 @@ Parallel reduction/worker buffer size: 1 KB  / 0 KB
 
 [00:00:00] Generating 10 random starting tree(s) with 46 taxa
 [00:00:00] Generating 10 parsimony starting tree(s) with 46 taxa
-[00:00:00] Data distribution: max. partitions/sites/weight per thread: 1 / 283 / 566
+[00:00:00] Data distribution: max. partitions/sites/weight per thread: 1 / 188 / 376
 [00:00:00] Data distribution: max. searches per worker: 8
 
 Starting ML tree search with 20 distinct starting trees
 
-[00:00:01] [worker #1] ML tree search #2, logLikelihood: -3341.143373
-[00:00:02] [worker #3] ML tree search #4, logLikelihood: -3341.143369
-[00:00:02] [worker #2] ML tree search #3, logLikelihood: -3341.143368
-[00:00:02] [worker #0] ML tree search #1, logLikelihood: -3341.143368
-[00:00:03] [worker #2] ML tree search #7, logLikelihood: -3341.143372
-[00:00:03] [worker #1] ML tree search #6, logLikelihood: -3341.143371
-[00:00:04] [worker #0] ML tree search #5, logLikelihood: -3341.143372
-[00:00:04] [worker #3] ML tree search #8, logLikelihood: -3341.143369
-[00:00:05] [worker #2] ML tree search #11, logLikelihood: -3341.143368
-[00:00:05] [worker #3] ML tree search #12, logLikelihood: -3341.143369
-[00:00:06] [worker #1] ML tree search #10, logLikelihood: -3341.143371
-[00:00:06] [worker #0] ML tree search #9, logLikelihood: -3341.143368
-[00:00:07] [worker #2] ML tree search #15, logLikelihood: -3341.143368
-[00:00:07] [worker #3] ML tree search #16, logLikelihood: -3341.143367
-[00:00:07] [worker #1] ML tree search #14, logLikelihood: -3341.143367
-[00:00:08] [worker #0] ML tree search #13, logLikelihood: -3341.143368
-[00:00:08] [worker #2] ML tree search #19, logLikelihood: -3341.143369
-[00:00:08] [worker #3] ML tree search #20, logLikelihood: -3341.143369
-[00:00:09] [worker #1] ML tree search #18, logLikelihood: -3341.143369
-[00:00:09] [worker #0] ML tree search #17, logLikelihood: -3341.143369
+[00:00:01] [worker #0] ML tree search #1, logLikelihood: -2184.391579
+[00:00:01] [worker #1] ML tree search #2, logLikelihood: -2184.391578
+[00:00:01] [worker #3] ML tree search #4, logLikelihood: -2184.391583
+[00:00:01] [worker #2] ML tree search #3, logLikelihood: -2184.391577
+[00:00:02] [worker #3] ML tree search #8, logLikelihood: -2184.391578
+[00:00:02] [worker #0] ML tree search #5, logLikelihood: -2184.757923
+[00:00:02] [worker #2] ML tree search #7, logLikelihood: -2184.391579
+[00:00:02] [worker #1] ML tree search #6, logLikelihood: -2184.391578
+[00:00:03] [worker #3] ML tree search #12, logLikelihood: -2184.391578
+[00:00:03] [worker #2] ML tree search #11, logLikelihood: -2184.391578
+[00:00:04] [worker #1] ML tree search #10, logLikelihood: -2184.391578
+[00:00:04] [worker #0] ML tree search #9, logLikelihood: -2184.391578
+[00:00:04] [worker #3] ML tree search #16, logLikelihood: -2184.391578
+[00:00:04] [worker #2] ML tree search #15, logLikelihood: -2184.391578
+[00:00:05] [worker #1] ML tree search #14, logLikelihood: -2184.391578
+[00:00:05] [worker #0] ML tree search #13, logLikelihood: -2184.391578
+[00:00:05] [worker #3] ML tree search #20, logLikelihood: -2184.391578
+[00:00:06] [worker #2] ML tree search #19, logLikelihood: -2184.391578
+[00:00:06] [worker #0] ML tree search #17, logLikelihood: -2184.757924
+[00:00:06] [worker #1] ML tree search #18, logLikelihood: -2184.391585
 
-[00:00:09] ML tree search completed, best tree logLH: -3341.143367
+[00:00:06] ML tree search completed, best tree logLH: -2184.391577
 
-[00:00:09] Starting bootstrapping analysis with 10 replicates.
+[00:00:06] Starting bootstrapping analysis with 10 replicates.
 
-[00:00:11] [worker #1] Bootstrap tree #2, logLikelihood: -3385.105216
-[00:00:11] [worker #0] Bootstrap tree #1, logLikelihood: -3320.700778
-[00:00:11] [worker #3] Bootstrap tree #4, logLikelihood: -3236.331853
-[00:00:11] [worker #2] Bootstrap tree #3, logLikelihood: -3273.048281
-[00:00:12] [worker #1] Bootstrap tree #6, logLikelihood: -3253.835482
-[00:00:12] [worker #2] Bootstrap tree #7, logLikelihood: -3213.393765
-[00:00:12] [worker #3] Bootstrap tree #8, logLikelihood: -3221.293364
-[00:00:12] [worker #0] Bootstrap tree #5, logLikelihood: -3261.596666
-[00:00:14] [worker #0] Bootstrap tree #9, logLikelihood: -3245.716654
-[00:00:14] [worker #1] Bootstrap tree #10, logLikelihood: -3381.102305
+[00:00:07] [worker #3] Bootstrap tree #4, logLikelihood: -2203.972119
+[00:00:07] [worker #2] Bootstrap tree #3, logLikelihood: -2151.705424
+[00:00:07] [worker #0] Bootstrap tree #1, logLikelihood: -2080.112520
+[00:00:07] [worker #1] Bootstrap tree #2, logLikelihood: -2148.694675
+[00:00:08] [worker #1] Bootstrap tree #6, logLikelihood: -2117.150577
+[00:00:08] [worker #2] Bootstrap tree #7, logLikelihood: -2130.171311
+[00:00:08] [worker #0] Bootstrap tree #5, logLikelihood: -2171.104254
+[00:00:08] [worker #3] Bootstrap tree #8, logLikelihood: -2139.962779
+[00:00:09] [worker #1] Bootstrap tree #10, logLikelihood: -2090.225675
+[00:00:09] [worker #0] Bootstrap tree #9, logLikelihood: -2250.022414
 
 Optimized model parameters:
 
    Partition 0: noname
    Rate heterogeneity: NONE
-   Base frequencies (ML): 0.572200 0.427800 
+   Base frequencies (ML): 0.516707 0.483293 
    Substitution rates (ML): 1.000000 
 
 
-Final LogLikelihood: -3341.143367
+Final LogLikelihood: -2184.391577
 
-AIC score: 6862.286734 / AICc score: 6919.161734 / BIC score: 7216.664993
+AIC score: 4548.783155 / AICc score: 4633.216145 / BIC score: 4877.507181
 Free parameters (model + branch lengths): 90
 
-WARNING: Best ML tree contains 2 near-zero branches!
+WARNING: Best ML tree contains 7 near-zero branches!
 
-Best ML tree with collapsed near-zero branches saved to: /home/pavlos/software/msdir/binmat.fa.raxml.bestTreeCollapsed
-Best ML tree saved to: /home/pavlos/software/msdir/binmat.fa.raxml.bestTree
-All ML trees saved to: /home/pavlos/software/msdir/binmat.fa.raxml.mlTrees
-Best ML tree with Felsenstein bootstrap (FBP) support values saved to: /home/pavlos/software/msdir/binmat.fa.raxml.support
-Optimized model saved to: /home/pavlos/software/msdir/binmat.fa.raxml.bestModel
-Bootstrap trees saved to: /home/pavlos/software/msdir/binmat.fa.raxml.bootstraps
+Best ML tree with collapsed near-zero branches saved to: /home/pavlos/research/language_evolution/mslang/binmat.fa.raxml.bestTreeCollapsed
+Best ML tree saved to: /home/pavlos/research/language_evolution/mslang/binmat.fa.raxml.bestTree
+All ML trees saved to: /home/pavlos/research/language_evolution/mslang/binmat.fa.raxml.mlTrees
+Best ML tree with Felsenstein bootstrap (FBP) support values saved to: /home/pavlos/research/language_evolution/mslang/binmat.fa.raxml.support
+Optimized model saved to: /home/pavlos/research/language_evolution/mslang/binmat.fa.raxml.bestModel
+Bootstrap trees saved to: /home/pavlos/research/language_evolution/mslang/binmat.fa.raxml.bootstraps
 
-Execution log saved to: /home/pavlos/software/msdir/binmat.fa.raxml.log
+Execution log saved to: /home/pavlos/research/language_evolution/mslang/binmat.fa.raxml.log
 
-Analysis started: 18-Mar-2024 17:39:22 / finished: 18-Mar-2024 17:39:36
+Analysis started: 18-Mar-2024 21:32:21 / finished: 18-Mar-2024 21:32:30
 
-Elapsed time: 14.231 seconds
+Elapsed time: 9.645 seconds
 
-Consumed energy: 5124068430.461 Wh (= 25620342 km in an electric car, or 128101711 km with an e-scooter!)
+Consumed energy: 5124068766.151 Wh (= 25620344 km in an electric car, or 128101719 km with an e-scooter!)
 

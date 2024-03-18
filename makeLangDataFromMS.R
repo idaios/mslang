@@ -4,9 +4,15 @@ library(phangorn)
 rm(list=ls())
 n = 46
 
-
-getJoints = function(n){
-    rtr = pbtree(n=n, tip.label=1:n)
+getJoints = function(n=NULL, intree=NULL){
+    rtr = ""
+    if(is.null(intree)){
+        rtr = pbtree(n=n, tip.label=1:n)
+    }else if(is.null(n)){
+        rtr = ape::read.tree(file=intree)
+    }else{
+        stop("Either tree or n should be provided")
+    }
     myrtr=rtr
     nl = node.depth.edgelength(rtr)
     nl[1:n] =  nl[1]
@@ -37,10 +43,10 @@ getJoints = function(n){
 
 
 ##cmd="./ms 46 1 -r 10 2 -G 5 -s 512 -T -a"
-simres = getJoints(n)##system(cmd, intern=TRUE) 
+simres = getJoints(n=n)##system(cmd, intern=TRUE) 
 msout = simres[[2]]
 simtree = simres[[1]]
-plot(simtree)
+##plot(simtree)
 
 len=250
 
@@ -173,7 +179,7 @@ origbintree = runraxml("origbinmat.fa", mat, "BIN")
 
 sizes = list(orig=ncol(mat), mult=ncol(multMat), bin=ncol(binmat))
 sizes
-trees = list(real=realTreeN, orig=origbintree, mult=multtree, bin=bintree)
+trees = list(real=realTreeN, guide=simtree, orig=origbintree, mult=multtree, bin=bintree)
 dists = matrix(nrow=length(trees), ncol=length(trees))
 colnames(dists) = names(trees)
 row.names(dists) = names(trees)
